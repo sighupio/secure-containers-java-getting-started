@@ -1,18 +1,18 @@
 # Certified Images - Getting Started - Java (Maven and Spring Boot)
 
 Welcome to the **Getting started** with Java applications using SIGHUP Certified images.
-In this repository you will find a simple hello world application written in Java.
+In this repository, you will find a simple hello world application written in Java.
 
-The build process will use a maven certified image while it will run on top of openjdk.
+The build process will use a maven certified image while it will run on top of OpenJDK.
 
 ## Requirements
 
-Before continue with this getting started, you will need:
+Before continuing with this getting started, you will need:
 - Valid subscription to the service.
   - Feel free to request access using [this simple google form](https://forms.gle/Wf916FGxUqRaLY5k7)
   - If you want extended support over the images, [consider to buy the subscription](https://gumroad.com/l/NiCYf).
 - [`docker`](https://docs.docker.com/get-docker/)
-  - `docker login reg.sihup.io` with your credentials before continue.
+  - `docker login reg.sihup.io` with your credentials before continuing.
 
 ## Build
 
@@ -58,7 +58,7 @@ $ curl localhost:8080
 Greetings from SIGHUP!
 ```
 
-Prometheus jmx exporter is available in the 30000 port:
+Prometheus JMX exporter is available in the 30000 port:
 
 ```bash
 $ curl localhost:30000
@@ -82,4 +82,8 @@ jvm_classes_loaded_total 6616.0
 # HELP jvm_classes_unloaded_total The total number of classes that have been unloaded since the JVM has started execution
 # TYPE jvm_classes_unloaded_total counter
 jvm_classes_unloaded_total 0.0
+```
+
+```bash
+$ docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v $HOME/Library/Caches:/root/.cache/ aquasec/trivy --light spring-boot-maven:local
 ```
