@@ -32,13 +32,13 @@ $ docker run --name demo -d -p 8080:8080 -p 30000:30000 spring-boot-maven:local
 d52b75b5d4495242a3c4a0bb3c6cb9e18eef7bd7e0fac3a003ec156bd9c5034b
 $ docker logs demo
 exec java -javaagent:/opt/SIGHUP/java/14/entrypoint/jmx_prometheus_javaagent.jar=30000:/opt/SIGHUP/java/14/configuration/jmx_exporter.yaml -XX:+ExitOnOutOfMemoryError -cp . -jar /app/demo-0.0.1-SNAPSHOT.jar
- _____  _____  _____  _   _  _   _ ______ 
+ _____  _____  _____  _   _  _   _ ______
 /  ___||_   _||  __ \| | | || | | || ___ \
 \ `--.   | |  | |  \/| |_| || | | || |_/ /
- `--. \  | |  | | __ |  _  || | | ||  __/ 
-/\__/ / _| |_ | |_\ \| | | || |_| || |    
-\____/  \___/  \____/\_| |_/ \___/ \_|    
-                                          
+ `--. \  | |  | | __ |  _  || | | ||  __/
+/\__/ / _| |_ | |_\ \| | | || |_| || |
+\____/  \___/  \____/\_| |_/ \___/ \_|
+
 2020-06-03 15:03:34.376  INFO 7 --- [           main] io.sighup.demo.DemoApplication           : Starting DemoApplication v0.0.1-SNAPSHOT on d52b75b5d449 with PID 7 (/app/demo-0.0.1-SNAPSHOT.jar started by root in /app)
 2020-06-03 15:03:34.379  INFO 7 --- [           main] io.sighup.demo.DemoApplication           : No active profile set, falling back to default profiles: default
 2020-06-03 15:03:35.857  INFO 7 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
